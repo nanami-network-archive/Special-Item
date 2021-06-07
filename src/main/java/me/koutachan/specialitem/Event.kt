@@ -20,11 +20,13 @@ object Event : Listener {
                         if(a.block.type == Material.GRASS_BLOCK || a.block.type == Material.DIRT) {
                             val airCheck = e.block.location.add(x.toDouble(), 1.0 , z.toDouble())
                             if (airCheck.block.type == Material.AIR || airCheck.block.type == Material.CAVE_AIR) {
-                                a.block.type = Material.FARMLAND
 
                                 e.player.playSound(e.player.location, Sound.ITEM_HOE_TILL, 1F, 1F)
-                                val api = CoreprotectAPI.apiCoreProtect() ?: return
-                                api.logPlacement(e.player.name,a.block.location,Material.FARMLAND,a.block.blockData)
+                                CoreprotectAPI.apiCoreProtect()?.logRemoval(e.player.name, a.block.location, a.block.type, a.block.blockData)
+
+                                a.block.type = Material.FARMLAND
+
+                                CoreprotectAPI.apiCoreProtect()?.logPlacement(e.player.name, a.block.location, Material.FARMLAND, a.block.blockData)
                             }
                         }
                     }
