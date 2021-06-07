@@ -102,6 +102,10 @@
             <id>sonatype</id>
             <url>https://oss.sonatype.org/content/groups/public/</url>
         </repository>
+        <repository>
+            <id>playpro</id>
+            <url>https://maven.playpro.com/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -110,6 +114,11 @@
             <artifactId>spigot-api</artifactId>
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.coreprotect</groupId>
+            <artifactId>coreprotect</artifactId>
+            <version>19.5</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>

@@ -9,7 +9,9 @@ import org.bukkit.inventory.ShapedRecipe
 import org.bukkit.plugin.java.JavaPlugin
 
 class SpecialItem : JavaPlugin() {
-    lateinit var plugin: JavaPlugin
+    companion object {
+        lateinit var plugin: JavaPlugin
+    }
     override fun onEnable() {
         plugin = this
         val recipe1Item = ItemStack(Material.DIAMOND_HOE)
