@@ -1,0 +1,4 @@
+name: SpecialItem
+version: ${project.version}
+main: me.koutachan.specialitem.SpecialItem
+api-version: 1.16
